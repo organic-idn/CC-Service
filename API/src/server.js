@@ -1,6 +1,6 @@
 const server = require("./app");
-const port = 5000;
-const host = process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0'
+const port = process.env.PORT || 8080;
+const host = process.env.HOST !== 'production' ? 'localhost' : '0.0.0.0';
 
 // server listening 
 server.listen(port, host, function(err){
