@@ -8,7 +8,7 @@ const pool = mysql_db.db_ML
 module.exports = async (req, res) => {
     const scanningResult = req.query.result;
 
-    pool.query('SELECT info FROM organic WHERE nama = ?', [scanningResult], (error, results) => {
+    pool.query('SELECT info FROM organicdb WHERE nama = ?', [scanningResult], (error, results) => {
         if (error) {
             console.error('Error retrieving organic info:', error);
             res.status(500).json({ error: 'Internal Server Error' });
