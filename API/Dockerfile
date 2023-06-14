@@ -2,7 +2,7 @@
 # https://hub.docker.com/_/node
 FROM node:16
 
-WORKDIR /home/syifakush/CC-Service/API
+WORKDIR /home/syifakush/organic-api/CC-Service/API
 
 # Copying this separately prevents re-running npm install on every code change.
 COPY package*.json ./

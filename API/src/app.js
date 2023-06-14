@@ -16,6 +16,6 @@ app.post("/refreshAccessToken", require('./authentication/refreshAccessToken.js'
 app.post("/logout", require('./authentication/logout.js'))
 
 //GET VEGETABLE INFO FROM DATABASE API
-app.get('/info_ML', validateToken, require(`./ML/ml_desc.js`))
+app.get('/info_ML', require('./authentication/accessTokenValidate'), require(`./ML/ml_desc.js`))
 
 module.exports = app;
