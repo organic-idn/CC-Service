@@ -45,7 +45,8 @@ module.exports = async (req, res) => {
 
         else {
             const organicInfo = results[0].info;
-            res.json({ info: organicInfo });
+            const formattedInfo = organicInfo.replace(/\\n/g, '\n');
+            res.send(formattedInfo);
         }
     });
 }
