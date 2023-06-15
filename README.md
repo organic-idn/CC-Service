@@ -86,7 +86,7 @@
 <h2>Under Development</h2>
 <h3>Entity Relationship Diagram (ERD)</h3>
 <p align="center">
-  <img src="ERD organic.png" alt="ERD" />
+  <img src="ERD organic.jpg" alt="ERD" />
 </p>
 <br>
 
