@@ -32,7 +32,7 @@
 <br><br>
    <pre>GET https://organic-api-service-ejjwtknspq-et.a.run.app/info_ML/{result}</pre>
    <p>- Query {result} <br>
-    - Response Body {fomattedInfo} <br></p>
+    - Response Body {response.headData} <br></p>
 </p>
 <br>
 <h3>Cloud Architecture</h3>
