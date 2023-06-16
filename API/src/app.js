@@ -3,6 +3,10 @@ const app = express()
 
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.send("This is Base URL of Organic API Services")
+})
+
 // REGISTER A USER API
 app.post("/createUser", require('./authentication/createUser.js'))
 
