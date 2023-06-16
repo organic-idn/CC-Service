@@ -7,10 +7,11 @@
 </p>
 <br>
 <h2>Current Implementation</h2>
-<br>
 <h3>Available API Services</h3>
+<h4>Postman Documentation</h4>
+<p>https://documenter.getpostman.com/view/27808584/2s93sgV9iw</p>
 <p>
-1. Authentications
+<b>1. Authentications</b>
 <br>
    <pre>POST https://organic-api-service-ejjwtknspq-et.a.run.app/createUser</pre>
     <p>- Request Body {"username", "email", "password"} <br>
@@ -28,11 +29,11 @@
    <p>- Request Body {"refreshToken"} <br>
     - Response Body {"message", "status"} <br></p>
 <br>
-2. Result Classification Information
+<b>2. Result Classification Information</b>
 <br><br>
    <pre>GET https://organic-api-service-ejjwtknspq-et.a.run.app/info_ML/{result}</pre>
    <p>- Query {result} <br>
-    - Response Body {response.headData} <br></p>
+    - Response Body {"ID", "nama", "namaLatin", "imageURL", "umur", "deskripsi", "nutrisi", "penyimpanan"} <br></p>
 </p>
 <br>
 <h3>Cloud Architecture</h3>
@@ -43,7 +44,7 @@
 <h3>Deployment Environment</h3>
 <br>
 <p>
-1. Dependency
+<b>1. Dependency</b>
   <br>
   <pre>
   - express
@@ -52,7 +53,7 @@
   - dotenv
   - mysql </pre>
   <br>
-2. Environment variable
+<b>2. Environment variable</b>
   <br>
   <pre>
   - GOOGLE_PROJECT_ID={your project ID}
@@ -66,7 +67,7 @@
   - ACCESS_TOKEN_SECRET={your own access token key}
   - REFRESH_TOKEN_SECRET={yout own refresh token key} </pre>
   <br>
-3. Cloud shell command
+<b>3. Cloud shell command</b>
   <br>
   <pre>
   - gcloud builds submit --tag {location}-docker.pkg.dev/$GOOGLE_PROJECT_ID/$REPO_NAME/$CLOUD_RUN_SERVICE \
